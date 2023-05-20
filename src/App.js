@@ -82,13 +82,14 @@ function App() {
       <div className="flex pl-11 pt-5 text-center  ">
       <h1 className="text-4xl  ">🚀 Web.Sol</h1>
       </div>
-      <div className=" p-7">
+      <div className="flex justify-center items-center p-7">
       <h2 className="mb-2 text-6xl pt-3 pd-3 " >
          Send ISTE Tokens
          </h2>
       </div>
       </div>
-      <form onSubmit={handleSubmit} className="flex flex-col items-start">
+      <div className="flex justify-center items-center">
+      <form onSubmit={handleSubmit} className="flex flex-col items-center">
       <div className="flex justify-center ">
         <label className="m-7 text-3xl pt-4" htmlFor="recipient">
           🏠Recipient Address:
@@ -121,12 +122,13 @@ function App() {
           required
         />
         </div>
-        <div className=" mt-5 pt-7">
+        <div className=" mt-5 pt-7 ">
         <button className="rounded-full text-lg pt-3 pb-3 pl-6 pr-6 border-2 text-black border-[#19A7CE]  hover:bg-[#19A7CE] hover:text-white ">
           Send Tokens 🛫
         </button>
         </div>
       </form>
+      </div>
       {transferHistory.length > 0 && (
         <div className="w-full">
           <h2 className="text-2xl font-bold text-gray-800">Transfer History</h2>
