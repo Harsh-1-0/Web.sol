@@ -11,7 +11,7 @@ function App() {
   useEffect(() => {
     // this function is used to check if the browser is web3 browser or not basically to check if metamask is installed or not
     const initWeb3 = async () => {
-      // checks if the eth provider is available in the browser 
+      // checks if the eth provider is available in the browser
       if (window.ethereum) {
         // creates a new instance of the web3 library
         window.web3 = new Web3(window.ethereum);
@@ -80,34 +80,43 @@ function App() {
     <div className="min-h-screen bg-gray-100 flex flex-col justify-center items-center">
       <h1 className="text-4xl font-bold text-gray-800 pb-8">Send ISTE Tokens</h1>
       <form onSubmit={handleSubmit} className="flex flex-col items-start">
-        <label className="text-2xl" htmlFor="recipient">
-          <span className="text-3xl px-4">
-            💸
-          </span>
-          Recipient Address:
+      <div className="flex justify-center ">
+        <label className="m-7 text-3xl pt-4" htmlFor="recipient">
+          🏠Recipient Address:
         </label>
+        </div>
+        <div className=" text-2xl  ">
         <input
-          className="border-blue-400 rounded-md p-2 w-full mb-4 bg-transparent border-b-2 outline-none"
+          className=" border-b border-black text-black text-xl p-4 focus:outline-0 placeholder:text-black "
+          placeholder="Enter Address"
           type="text"
           id="recipient"
           value={recipientAddress}
           onChange={(e) => setRecipientAddress(e.target.value)}
           required
         />
-        <label className="" htmlFor="amount">
-          Amount of Tokens:
+        </div>
+        <div className="flex justify-center">
+        <label className="m-7 text-3xl pt-4" htmlFor="amount">
+          🪙Amount of Tokens:
         </label>
+        </div>
+         <div className=" text-2xl  ">
         <input
-          className="border-b-2 border-blue-400 rounded-md p-2 w-80 mb-4 bg-transparent"
+          className="border-b border-black text-black text-xl p-4 focus:outline-0 placeholder:text-black "
+          placeholder="Enter tokens"
           type="number"
           id="amount"
           value={amount}
           onChange={(e) => setAmount(e.target.value)}
           required
         />
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md">
-          Send Tokens
+        </div>
+        <div className=" mt-5 pt-7">
+        <button className="rounded-full text-lg pt-3 pb-3 pl-6 pr-6 border-2 text-black border-[#19A7CE]  hover:bg-[#19A7CE] hover:text-white ">
+          Send Tokens 🛫
         </button>
+        </div>
       </form>
       {transferHistory.length > 0 && (
         <div className="w-full">
@@ -136,8 +145,7 @@ function App() {
       )}
     </div>
   );
-  
+
 }
 
 export default App;
-
