@@ -77,8 +77,17 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col justify-center items-center">
-      <h1 className="text-4xl font-bold text-gray-800 pb-8">Send ISTE Tokens</h1>
+    <div className="App  ">
+      <div className="bg-[#19A7CE]  text-white">
+      <div className="flex pl-11 pt-5 text-center  ">
+      <h1 className="text-4xl  ">🚀 Web.Sol</h1>
+      </div>
+      <div className=" p-7">
+      <h2 className="mb-2 text-6xl pt-3 pd-3 " >
+         Send ISTE Tokens
+         </h2>
+      </div>
+      </div>
       <form onSubmit={handleSubmit} className="flex flex-col items-start">
       <div className="flex justify-center ">
         <label className="m-7 text-3xl pt-4" htmlFor="recipient">
